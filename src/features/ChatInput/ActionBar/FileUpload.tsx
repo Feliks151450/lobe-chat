@@ -22,7 +22,6 @@ const FileUpload = memo(() => {
 
   return (
     <Upload
-      accept="image/*"
       beforeUpload={async (file) => {
         setLoading(true);
 
