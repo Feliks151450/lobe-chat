@@ -133,6 +133,10 @@ describe('settingsSelectors', () => {
           displayName: 'gpt-4-vision-preview',
           name: 'gpt-4-vision-preview',
         },
+        {
+          displayName: 'gpt-4-all',
+          name: 'gpt-4-all',
+        },
       ]);
     });
 

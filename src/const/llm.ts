@@ -15,7 +15,7 @@ export const DEFAULT_OPENAI_MODEL_LIST: string[] = Object.values(LanguageModel);
 
 // vision model white list, these models will change the content from string to array
 // refs: https://github.com/lobehub/lobe-chat/issues/790
-export const isVisionModel = (model?: string) => !!model && model.includes('vision');
+export const isVisionModel = (model?: string) => !!model && (model.includes('vision') || model === "gpt-4-all");
 
 // refs: https://github.com/lobehub/lobe-chat/issues/837
 export const GPT4_VISION_MODEL_DEFAULT_MAX_TOKENS = 2048;
@@ -29,4 +29,5 @@ export const ModelTokens: Record<LanguageModel, number> = {
   [LanguageModel.GPT4_PREVIEW]: 128_000,
   [LanguageModel.GPT4_VISION_PREVIEW]: 128_000,
   [LanguageModel.GPT4_32K]: 32_768,
+  [LanguageModel.GPT4_ALL]: 32_768,
 };

@@ -74,7 +74,7 @@ describe('ChatService', () => {
     it('should not use tools for models in the vision model whitelist', async () => {
       const getChatCompletionSpy = vi.spyOn(chatService, 'getChatCompletion');
       const messages = [{ content: 'Hello', role: 'user' }] as ChatMessage[];
-      const modelInWhitelist = 'gpt-4-vision-preview';
+      const modelInWhitelist = 'gpt-4-vision-preview,gpt-4-all';
 
       await chatService.createAssistantMessage({
         messages,
